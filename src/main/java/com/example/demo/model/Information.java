@@ -14,20 +14,13 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.sql.Timestamp;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 
 /**
  *
  * @author Cedrick
  */
-@Entity
 @ClassAnotation(table = "information")
 public class Information {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     @Attr(isPrimary = true)
     int id;
     @Attr

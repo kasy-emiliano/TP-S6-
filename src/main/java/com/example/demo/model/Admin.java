@@ -7,20 +7,13 @@ package com.example.demo.model;
 
 import com.example.demo.generic.Attr;
 import com.example.demo.generic.ClassAnotation;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 
 /**
  *
  * 
  */
-@Entity
 @ClassAnotation(table = "admin")
 public class Admin {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     @Attr(isPrimary = true)
     int id;
     @Attr
