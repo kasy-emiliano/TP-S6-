@@ -15,8 +15,8 @@ public class Econnect {
         Connection con = null;
         try {
 //            Class.forName("org.postgresql.Driver");
-//            con = (Connection) DriverManager.getConnection("jdbc:postgresql://containers-us-west-180.railway.app:6027/railway","postgres","WpZhHXX7Dl3KMFNqu9fu");
-           con = datasource.getConnection();
+            con = (Connection) DriverManager.getConnection("jdbc:postgresql://containers-us-west-180.railway.app:6027/railway","postgres","WpZhHXX7Dl3KMFNqu9fu");
+//           con = datasource.getConnection();
             con.setAutoCommit(false);
             System.out.println("Connectee ahn");
 
