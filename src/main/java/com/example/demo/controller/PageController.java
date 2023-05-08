@@ -77,7 +77,7 @@ public class PageController {
          int idAdmin=admin.get(0).getId();
         System.out.println("aaaaaaa"+ idAdmin);
           session.setAttribute("idAdmin", idAdmin);
-          return "redirect:/liste"; 
+          return "redirect:/liste-de-tout-les-info-de-IA"; 
         }
     }
     
@@ -106,7 +106,7 @@ public class PageController {
       
          
         //model.addAttribute("name", titre);
-      return "redirect:/liste";
+      return "redirect:/liste-de-tout-les-info-de-IA";
     }
     
      @RequestMapping("/liste-de-tout-les-info-de-IA")

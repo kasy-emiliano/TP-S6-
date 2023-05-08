@@ -2,7 +2,6 @@ com\example\demo\dao\HibernateDao.class
 com\example\demo\generic\SyncDAO.class
 connexion\Connexion.class
 com\example\demo\generic\GenericDAO.class
-com\example\demo\generic\EconnectSQLServer.class
 com\example\demo\util\exception\JSONException.class
 com\example\demo\controller\PageController.class
 com\example\demo\model\Admin.class
