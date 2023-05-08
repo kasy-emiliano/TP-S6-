@@ -161,9 +161,7 @@ public class Information {
     
     // ...
 }
-    public void modif(Information information){
-        
-    }
+   
 }
  // ...
 
