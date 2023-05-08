@@ -15,9 +15,9 @@ public class Connect {
         DataSource datasource;
     
      public java.sql.Connection con() throws Exception{
-//        Class.forName("org.postgresql.Driver");
-//        return DriverManager.getConnection("jdbc:postgresql://containers-us-west-180.railway.app:6027/railway","postgres","WpZhHXX7Dl3KMFNqu9fu");
-        return datasource.getConnection();
+        Class.forName("org.postgresql.Driver");
+        return DriverManager.getConnection("jdbc:postgresql://containers-us-west-180.railway.app:6027/railway","postgres","WpZhHXX7Dl3KMFNqu9fu");
+//        return datasource.getConnection();
      }
     
 }
