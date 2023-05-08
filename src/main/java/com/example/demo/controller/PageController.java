@@ -69,7 +69,7 @@ public class PageController {
         PrintWriter out = response.getWriter();
         String nom = request.getParameter("name");
         String mdp = request.getParameter("mdp");
-        ArrayList<Admin> admin = GenericDAO.findBySql(new Admin(), "select * from admin where nom='" + nom + "' and mdp='" + mdp + "'", Econnect.connexion());
+        ArrayList<Admin> admin = GenericDAO.findBySql(new Admin(), "select * from admin where nom='" + nom + "' and mdp='" + mdp + "'", new Econnect().connexion());
 
         if (admin.isEmpty()) {
            return "login";
@@ -99,7 +99,7 @@ public class PageController {
           byte[] bytes = file.getBytes();
           System.out.println("sdfgsdfg"+ bytes);
         String photo = Base64.getEncoder().encodeToString(bytes);
-        GenericDAO.save(new Information(titre, body, photo), Econnect.connexion());
+        GenericDAO.save(new Information(titre, body, photo), new Econnect().connexion());
         
   
   
@@ -114,7 +114,7 @@ public class PageController {
         HttpServletResponse response) throws IOException, Exception {
         PrintWriter out = response.getWriter();
         ArrayList<Information> listeInform = new ArrayList<>();
-        listeInform = GenericDAO.findBySql(new Information(), "select*from information", Econnect.connexion());
+        listeInform = GenericDAO.findBySql(new Information(), "select*from information", new Econnect().connexion());
          for (Information information : listeInform) {
              information.setUrl();
          }
