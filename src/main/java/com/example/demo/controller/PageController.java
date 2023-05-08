@@ -58,7 +58,7 @@ public class PageController {
         return "insertion";
     }
     
-    @RequestMapping("/login")
+    @RequestMapping("/login-Information-sur-les-IA")
     public String auth()
     {
         return "login";
@@ -87,7 +87,7 @@ public class PageController {
     if (session != null) {
         session.invalidate();
     }
-    return "redirect:/login";
+    return "redirect:/login-Information-sur-les-IA";
 }
     
    
@@ -131,7 +131,7 @@ public class PageController {
 public String supprimer(@PathVariable("id") int id) throws Exception {
     Information det = new Information();
     det.delete(id);
-    return "redirect:/liste";
+    return "redirect:/liste-de-tout-les-info-de-IA";
 }
     @GetMapping("/modifier/{id}")
     public String afficherFormulaireModification(@PathVariable("id") int id, Model model) throws Exception {
@@ -152,7 +152,7 @@ public String supprimer(@PathVariable("id") int id) throws Exception {
         Information det = new Information();
         det.update(id,titre,body,photo);
         model.addAttribute("id", id);
-        return "redirect:/liste";
+        return "redirect:/liste-de-tout-les-info-de-IA";
 
     }
      @GetMapping("/details/{titre}-{id}")
